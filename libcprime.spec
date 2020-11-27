@@ -14,7 +14,7 @@ BuildRequires:  qt5-devel
 LibCPrime is a Library for bookmarking, saving recent activites, managing settings for CuboCore Application Suite.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-v%{version}
 
 %build
 %qmake_qt5 PREFIX=/usr
