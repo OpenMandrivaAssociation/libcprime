@@ -27,7 +27,9 @@ LibCPrime is a Library for bookmarking, saving recent activites, managing settin
 %build
 %qmake_qt5 \
             PREFIX=/usr \
+%ifnarch %ix86 %arm 
             DEFINES+="LIB64"
+%endif
 %make_build
 
 %install
