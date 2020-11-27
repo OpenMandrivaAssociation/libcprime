@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:           libcprime
 Version:        4.0.0
 Release:        1
