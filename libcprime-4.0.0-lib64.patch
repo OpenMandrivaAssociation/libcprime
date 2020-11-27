@@ -1,0 +1,14 @@
+diff -up libcprime-v4.0.0/libcprime.pro.omv~ libcprime-v4.0.0/libcprime.pro
+--- libcprime-v4.0.0/libcprime.pro.omv~	2020-11-27 20:53:11.883158867 +0100
++++ libcprime-v4.0.0/libcprime.pro	2020-11-27 20:53:23.735336520 +0100
+@@ -55,8 +55,6 @@ unix {
+-        contains(DEFINES, LIB64): target.path = $$INSTALL_PREFIX/lib64
+-        else: target.path = $$INSTALL_PREFIX/lib
++        contains(DEFINES, LIB64): target.path = $$PREFIX/lib64
++        else: target.path = $$PREFIX/lib
+ 
+-        target.path	  = $$PREFIX/lib/
+-
+         includes.files    = cprime/*.h libcprime_global.h cprime/application/capplication.h
+         includes.path     = $$PREFIX/include/cprime/
+ 
