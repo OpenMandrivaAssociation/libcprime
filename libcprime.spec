@@ -43,8 +43,8 @@ mkdir -p %{buildroot}%{_bindir}
 %{_iconsdir}/hicolor/scalable/apps/applications-csuite.svg
 
 # Broken lib [WIP]
-%{_libdir}/libcprime.so
-%{_libdir}/libcprime.so.4
-%{_libdir}/libcprime.so.4.0
-%{_libdir}/libcprime.so.4.0.0
-%{_libdir}/pkgconfig/cprime.pc
+#{_libdir}/libcprime.so
+#{_libdir}/libcprime.so.4
+#{_libdir}/libcprime.so.4.0
+#{_libdir}/libcprime.so.4.0.0
+#{_libdir}/pkgconfig/cprime.pc
