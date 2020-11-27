@@ -8,7 +8,6 @@ License:        GPL3
 Group:          System/Libraries
 URL:            https://gitlab.com/cubocore/coreapps/libcprime
 Source0:        https://gitlab.com/cubocore/coreapps/libcprime/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-Patch0:         libcprime-lib.patch
 
 BuildRequires: qt5-devel
 BuildRequires: qt5-qtbase-devel
@@ -43,8 +42,8 @@ mkdir -p %{buildroot}%{_bindir}
 %{_iconsdir}/hicolor/scalable/apps/applications-csuite.svg
 
 # Broken lib [WIP]
-#{_libdir}/libcprime.so
-#{_libdir}/libcprime.so.4
-#{_libdir}/libcprime.so.4.0
-#{_libdir}/libcprime.so.4.0.0
-#{_libdir}/pkgconfig/cprime.pc
+%{_libdir}/libcprime.so
+%{_libdir}/libcprime.so.4
+%{_libdir}/libcprime.so.4.0
+%{_libdir}/libcprime.so.4.0.0
+%{_libdir}/pkgconfig/cprime.pc
