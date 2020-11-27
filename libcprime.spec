@@ -37,6 +37,6 @@ mkdir -p %{buildroot}%{_bindir}
 %files
 %{_includedir}/cprime/*
 %{_datadir}/coreapps/resource/*
-%{_icondsdir}/hicolor/scalable/apps/applications-csuite.svg
+%{_iconsdir}/hicolor/scalable/apps/applications-csuite.svg
 
 # Broken lib
