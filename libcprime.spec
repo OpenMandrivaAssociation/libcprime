@@ -4,14 +4,13 @@
 %define devpackage %mklibname -d cprime
 
 Name:           libcprime
-Version:        4.0.0
+Version:        4.1.0
 Release:        1
 Summary:        Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 License:        GPLv3
 Group:          System/Libraries
 URL:            https://gitlab.com/cubocore/coreapps/libcprime
 Source0:        https://gitlab.com/cubocore/coreapps/libcprime/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-Patch0:		libcprime-4.0.0-lib64.patch
 
 BuildRequires: qt5-devel
 BuildRequires: qt5-qtbase-devel
