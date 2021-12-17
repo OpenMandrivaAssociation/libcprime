@@ -53,8 +53,8 @@ Libcprime is a library for bookmarking, saving recent activites, managing settin
 %make_install -C build
 
 %files
-%{_datadir}/coreapps/resource/*
-%{_iconsdir}/hicolor/scalable/apps/applications-csuite.svg
+#{_datadir}/coreapps/resource/*
+#{_iconsdir}/hicolor/scalable/apps/applications-csuite.svg
 
 %files -n %{libpackage}
 %{_libdir}/libcprime.so.%{major}*
