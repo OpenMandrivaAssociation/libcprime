@@ -50,7 +50,7 @@ Libcprime is a library for bookmarking, saving recent activites, managing settin
 %make_build
 
 %install
-%make_install
+%make_install -C build
 
 %files
 %{_datadir}/coreapps/resource/*
