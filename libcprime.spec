@@ -12,6 +12,7 @@ Group:          System/Libraries
 URL:            https://gitlab.com/cubocore/coreapps/libcprime
 Source0:        https://gitlab.com/cubocore/coreapps/libcprime/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 
+BuildRequires: cmake
 BuildRequires: qt5-devel
 BuildRequires: qt5-qtbase-devel
 
@@ -45,11 +46,7 @@ Libcprime is a library for bookmarking, saving recent activites, managing settin
 %autosetup -p1 -n %{name}-v%{version}
 
 %build
-%qmake_qt5 \
-            PREFIX=/usr \
-%ifnarch %ix86 %arm 
-            DEFINES+="LIB64"
-%endif
+%cmake
 %make_build
 
 %install
