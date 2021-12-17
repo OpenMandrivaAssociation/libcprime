@@ -4,7 +4,7 @@
 %define devpackage %mklibname -d cprime
 
 Name:           libcprime
-Version:        4.1.0
+Version:        4.2.2
 Release:        1
 Summary:        Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 License:        GPLv3
