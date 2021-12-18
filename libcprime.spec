@@ -1,4 +1,4 @@
-%global debug_package %{nil}
+
 %define major 4
 %define libpackage %mklibname cprime %{major}
 %define devpackage %mklibname -d cprime
