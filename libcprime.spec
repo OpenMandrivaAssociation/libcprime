@@ -16,18 +16,16 @@ BuildRequires: cmake
 BuildRequires: qt5-devel
 BuildRequires: qt5-qtbase-devel
 
-# Upstream requires a dependency to "qt5-connectivity" but we at OMV split this package into two programs. So let's require two.
-Requires: qt5nfc
-Requires: qtbluetooth5
-Requires: libnotify
-
 %description
 LibCPrime is a Library for bookmarking, saving recent activites, managing settings for CuboCore Application Suite.
 
 %package -n %{libpackage}
 Summary:	Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 Group:		System/Libraries
-Requires:	%{name} = %{EVRD}
+# Upstream requires a dependency to "qt5-connectivity" but we at OMV split this package into two programs. So let's require two.
+Requires: qt5nfc
+Requires: qtbluetooth5
+Requires: libnotify
 
 %description -n %{libpackage}
 Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
