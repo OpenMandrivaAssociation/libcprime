@@ -58,4 +58,4 @@ Libcprime is a library for bookmarking, saving recent activites, managing settin
 %files -n %{devpackage}
 %{_includedir}/cprime/*
 %{_libdir}/libcprime*.so
-%{_libdir}/pkgconfig/cprime*.pc
+%{_datadir}/pkgconfig/cprime*.pc
