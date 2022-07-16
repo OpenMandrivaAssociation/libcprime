@@ -5,7 +5,7 @@
 
 Name:           libcprime
 Version:        4.3.0
-Release:        1
+Release:        2
 Summary:        Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 License:        GPLv3
 Group:          System/Libraries
