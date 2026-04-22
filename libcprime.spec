@@ -1,10 +1,10 @@
-
-%define major 4
-%define libpackage %mklibname cprime %{major}
+%define major 5
+%define libpackage %mklibname cprime
+%define oldlibpackage %mklibname cprime 4
 %define devpackage %mklibname -d cprime
 
 Name:           libcprime
-Version:        4.5.0
+Version:        5.0.1
 Release:        1
 Summary:        Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 License:        GPLv3
@@ -13,8 +13,12 @@ URL:            https://gitlab.com/cubocore/coreapps/libcprime
 Source0:        https://gitlab.com/cubocore/coreapps/libcprime/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 
 BuildRequires: cmake
-BuildRequires: qt5-devel
-BuildRequires: qt5-qtbase-devel
+BuildRequires: make
+BuildRequires: pkgconfig(Qt6Widgets)
+BuildRequires: pkgconfig(Qt6Core)
+BuildRequires: pkgconfig(Qt6Gui)
+BuildRequires: pkgconfig(Qt6Network)
+BuildRequires: pkgconfig(Qt6DBus)
 
 %description
 LibCPrime is a Library for bookmarking, saving recent activites, managing settings for CuboCore Application Suite.
@@ -22,9 +26,10 @@ LibCPrime is a Library for bookmarking, saving recent activites, managing settin
 %package -n %{libpackage}
 Summary:	Libcprime is a library for bookmarking, saving recent activites, managing settings of CoreApps.
 Group:		System/Libraries
+%rename %{oldlibpackage}
 # Upstream requires a dependency to "qt5-connectivity" but we at OMV split this package into two programs. So let's require two.
-Requires: qt5nfc
-Requires: qtbluetooth5
+Requires: %{_lib}Qt6Nfc
+Requires: %{_lib}Qt6Bluetooth
 Requires: libnotify
 
 %description -n %{libpackage}
